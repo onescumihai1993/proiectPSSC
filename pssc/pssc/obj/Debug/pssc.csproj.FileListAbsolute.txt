@@ -1,0 +1,9 @@
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\bin\Debug\pssc.exe.config
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\bin\Debug\pssc.exe
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\bin\Debug\pssc.pdb
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.csprojResolveAssemblyReference.cache
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.Form1.resources
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.Properties.Resources.resources
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.csproj.GenerateResource.Cache
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.exe
+C:\Users\EmanuelMihai\Documents\proiectPSSC\pssc\pssc\obj\Debug\pssc.pdb
