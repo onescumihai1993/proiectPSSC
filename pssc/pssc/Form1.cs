@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +38,21 @@ namespace pssc
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Data.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            try
+            {
+                formatter.Serialize(stream, Facultati);
+
+            }
+            catch (SerializationException)
+            { 
+            }
+            stream.Close();
+        }
     }
     public class Facultate
     {
@@ -49,7 +67,7 @@ namespace pssc
     public class Studenti
     {
      
-        private string nume_stud { set; get; }
+        public string nume_stud { set; get; }
         public Catalog catalog { set; get; }
         public Studenti(string nume_sutd)
         {
@@ -61,7 +79,7 @@ namespace pssc
     }
     public class Profesori
     {
-        private string nume_profi { set; get; }
+        public string nume_profi { set; get; }
 
         public Profesori(string nume_profi)
         {
@@ -71,8 +89,8 @@ namespace pssc
     }
     public class Catalog
     {
-        private List<Materii> mat = new List<Materii>();
-        private double med_gen { set; get; }
+        public List<Materii> mat = new List<Materii>();
+        public double med_gen { set; get; }
         public void CalculMedieGen()
         {
             int k = 0;
@@ -88,10 +106,10 @@ namespace pssc
     }
     public class Materii
     {
-        private List<int> note = new List<int>();
-        private Profesori prof { set; get; }
+        public List<int> note = new List<int>();
+        public Profesori prof { set; get; }
         public double medie { set; get; }
-        private string nume_mat { set; get; }
+        public string nume_mat { set; get; }
         public Materii(string nume_mat, Profesori prof)
         {
             this.nume_mat = nume_mat;
