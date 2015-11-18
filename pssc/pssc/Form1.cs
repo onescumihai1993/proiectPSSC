@@ -69,7 +69,46 @@ namespace pssc
         }
 
     }
-   
+    public class Catalog
+    {
+        private List<Materii> mat = new List<Materii>();
+        private double med_gen { set; get; }
+        public void CalculMedieGen()
+        {
+            int k = 0;
+            double med = 0;
+            foreach (Materii i in mat)
+            {
+                med += i.medie;
+                k++;
+            }
+            med_gen = med / k;
+        }
+
+    }
+    public class Materii
+    {
+        private List<int> note = new List<int>();
+        private Profesori prof { set; get; }
+        public double medie { set; get; }
+        private string nume_mat { set; get; }
+        public Materii(string nume_mat, Profesori prof)
+        {
+            this.nume_mat = nume_mat;
+            this.prof = prof;
+        }
+        public void CalculMedie()
+        {
+            int k = 0;
+            double med = 0;
+            foreach (int i in note)
+            {
+                med += i;
+                k++;
+            }
+            medie = med / k;
+        }
+    }
     }
 
 
